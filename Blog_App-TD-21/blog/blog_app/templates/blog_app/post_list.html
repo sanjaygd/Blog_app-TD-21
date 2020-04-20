@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    {% for obj in object_list %}
+    <a href="{% url 'posts:post_details' pk=obj.pk %}">{{obj.title}}</a><br> <!--dynamic url added-->
+    {% endfor %}
+<span><br></span>
+    {% for obj in object_list %}
+    <a href="{{ obj.get_absolute_url }}"><strong>{{obj.title}}</strong></a><br> <!--2nd method-->
+    {% endfor %}
+</body>
+</html>
