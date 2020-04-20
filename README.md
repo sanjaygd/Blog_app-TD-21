@@ -1,1 +1,1 @@
-# Blog_app-TD-21
+1.post update function is added in the view
